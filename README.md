@@ -6,7 +6,7 @@ This is a sample API to demonstrate a CRUD Application behavior using .NET Core 
 ## Technologies
 * [ASP.NET Core 6](https://docs.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-6.0)
 * [Entity Framework Core 6](https://docs.microsoft.com/en-us/ef/core/)
-* [Duende IdentityServer] (https://github.com/DuendeSoftware/IdentityServer)
+* [Duende IdentityServer](https://github.com/DuendeSoftware/IdentityServer)
 * [MediatR](https://github.com/jbogard/MediatR)
 * [Mapster](https://github.com/MapsterMapper/Mapster)
 * [FluentValidation](https://fluentvalidation.net/)

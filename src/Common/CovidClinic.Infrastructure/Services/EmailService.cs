@@ -32,14 +32,13 @@ namespace CovidClinic.Infrastructure.Services
                 message.To.Add(new MailAddress(to));
             }
  
-            //TODO:EmailService if there was error, try at least three times. 
             try
             {
                 await emailClient.SendMailAsync(message);
             }
             catch(Exception ex) 
             {
-                _logger.LogError(ex, "CovidClinic EmailService: Unhandled Exception for Request {@Request}", request);
+                _logger.LogError(ex, "CovidClinic > EmailService: Unhandled Exception for Request {@Request}", request);
             }
 
             _logger.LogWarning($"Sending email to {request.ToMail} from {request.FromMail} with subject {request.Subject}.");

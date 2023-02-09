@@ -22,7 +22,6 @@ namespace CovidClinic.Application.Cities.Commands.Create
 
         private async Task<bool> BeUniqueName(string name, CancellationToken cancellationToken)
         {
-            //TODO: Control by uppercase and CultureInfo
             return await _context.Cities.AllAsync(x => x.Name != name, cancellationToken);
         }
     }

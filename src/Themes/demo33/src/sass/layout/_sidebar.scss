@@ -1,0 +1,251 @@
+//
+// Sidebar
+//
+
+// Sidebar mode
+.app-sidebar {
+	border-right: var(--#{$prefix}app-separator-border);
+
+	.separator {
+		border-bottom: var(--#{$prefix}app-separator-border);	
+	}
+
+	.app-sidebar-navbar {
+		.btn-default,
+		.btn-accent {
+			width: $app-sidebar-primary-navbar-btn-size;
+			height: $app-sidebar-primary-navbar-btn-size;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.btn-default {
+			@include button-custom-variant(
+				$color: null, 
+				$icon-color: null, 
+				$border-color: null, 
+				$bg-color: var(--#{$prefix}body-bg), 
+				$color-active: null, 
+				$icon-color-active: null, 
+				$border-color-active: null, 
+				$bg-color-active: var(--#{$prefix}gray-900), 
+			);	
+
+			&:hover,
+			&.active {
+				box-shadow: var(--#{$prefix}app-sidebar-primary-navbar-btn-active-box-shadow) !important;	
+			}
+		}
+
+		.btn-accent {
+			@include button-custom-variant(
+				$color: null, 
+				$icon-color: var(--#{$prefix}gray-700),
+				$border-color: null, 
+				$bg-color: var(--#{$prefix}gray-300),
+				$color-active: null, 
+				$icon-color-active: var(--#{$prefix}gray-900),
+				$border-color-active: null, 
+				$bg-color-active: var(--#{$prefix}gray-300),
+			);
+		}
+	}
+}
+
+// Sidebar primary
+.app-sidebar-primary {
+	display: flex;
+	flex-direction: column;
+	border-right: var(--#{$prefix}app-separator-border);
+
+	// Scroll
+	.hover-scroll-y {        
+		@include scrollbar-color(transparent, var(--#{$prefix}gray-300));
+	}
+}
+
+// Sidebar secondary
+.app-sidebar-secondary {
+	display: flex;
+	flex-direction: column;
+	border-right: var(--#{$prefix}app-separator-border);
+
+	// Scroll
+	.hover-scroll-y {        
+		@include scrollbar-color(transparent, var(--#{$prefix}gray-300));
+	}
+
+	// Sidebar menu
+	.menu.app-sidebar-menu {
+		padding: 1.75rem;
+		font-weight: $font-weight-semibold;
+
+		> .menu-item {
+			.menu-link {
+				padding-top: 0.75rem;
+				padding-bottom: 0.75rem;
+
+				.menu-icon {
+					line-height: 0;
+
+					i {
+						font-size: 1.25rem;	
+						line-height: 0;
+					}
+
+					.svg-icon {
+						@include svg-icon-size(1rem);
+					}
+				}
+
+				.menu-title {
+					font-size: 1.05rem;
+					font-weight: $font-weight-bold;
+				}
+
+				&.active {
+					box-shadow: var(--#{$prefix}app-sidebar-primary-menu-item-active-box-shadow);	
+				}
+			}
+
+			> .menu-link {
+				padding-top: 1.15rem;
+				padding-bottom: 1.15rem;
+
+				.menu-icon {
+					i {
+						font-size: 1.75rem;	
+					}
+
+					.svg-icon {
+						@include svg-icon-size(1.5rem !important);
+					}
+				}
+
+				.menu-title {
+					font-size: 1.25rem;
+				}
+			}
+				
+			@include menu-link-default-state( 
+				$title-color: var(--#{$prefix}gray-600),
+				$icon-color: var(--#{$prefix}gray-500),
+				$bullet-color: var(--#{$prefix}gray-500),
+				$arrow-color: var(--#{$prefix}gray-500),
+				$bg-color: null,
+				$all-links: true
+			);
+			
+			@include menu-link-hover-state( 
+				$title-color: var(--#{$prefix}gray-800),
+				$icon-color: var(--#{$prefix}gray-600),
+				$bullet-color: var(--#{$prefix}gray-600),
+				$arrow-color: var(--#{$prefix}gray-600),
+				$bg-color: null,
+				$all-links: true
+			);
+			
+			@include menu-link-show-state( 
+				$title-color: var(--#{$prefix}gray-800),
+				$icon-color: var(--#{$prefix}gray-600),
+				$bullet-color: var(--#{$prefix}gray-600),
+				$arrow-color: var(--#{$prefix}gray-600),
+				$bg-color: null,
+				$all-links: true
+			);
+			
+			@include menu-link-here-state( 
+				$title-color: var(--#{$prefix}gray-800),
+				$icon-color: var(--#{$prefix}gray-600),
+				$bullet-color: var(--#{$prefix}gray-600),
+				$arrow-color: var(--#{$prefix}gray-600),
+				$bg-color: null,
+				$all-links: true
+			);
+
+			@include menu-link-active-state( 
+				$title-color: var(--#{$prefix}gray-800),
+				$icon-color: var(--#{$prefix}gray-600),
+				$bullet-color: var(--#{$prefix}gray-600),
+				$arrow-color: var(--#{$prefix}gray-600),
+				$bg-color: var(--#{$prefix}body-bg),
+				$all-links: true
+			);
+		}
+	}
+
+	// Sidebar tags
+	.menu.app-sidebar-tags {
+		padding: 1.75rem;
+		font-weight: $font-weight-semibold;
+
+		> .menu-item,
+		> .menu-inner > .menu-item {
+			@include menu-link-default-state( 
+				$title-color: var(--#{$prefix}gray-600),
+				$icon-color: var(--#{$prefix}gray-500),
+				$bullet-color: var(--#{$prefix}gray-500),
+				$arrow-color: var(--#{$prefix}gray-500),
+				$bg-color: null,
+				$all-links: true
+			);
+			
+			@include menu-link-hover-state( 
+				$title-color: var(--#{$prefix}gray-800),
+				$icon-color: var(--#{$prefix}gray-600),
+				$bullet-color: var(--#{$prefix}gray-600),
+				$arrow-color: var(--#{$prefix}gray-600),
+				$bg-color: null,
+				$all-links: true
+			);
+			
+			@include menu-link-show-state( 
+				$title-color: var(--#{$prefix}gray-800),
+				$icon-color: var(--#{$prefix}gray-600),
+				$bullet-color: var(--#{$prefix}gray-600),
+				$arrow-color: var(--#{$prefix}gray-600),
+				$bg-color: null,
+				$all-links: true
+			);
+			
+			@include menu-link-here-state( 
+				$title-color: var(--#{$prefix}gray-800),
+				$icon-color: var(--#{$prefix}gray-600),
+				$bullet-color: var(--#{$prefix}gray-600),
+				$arrow-color: var(--#{$prefix}gray-600),
+				$bg-color: null,
+				$all-links: true
+			);
+
+			@include menu-link-active-state( 
+				$title-color: var(--#{$prefix}gray-800),
+				$icon-color: var(--#{$prefix}gray-600),
+				$bullet-color: var(--#{$prefix}gray-600),
+				$arrow-color: var(--#{$prefix}gray-600),
+				$bg-color: null,
+				$all-links: true
+			);
+
+			.menu-link {
+				.menu-icon {
+					.bullet {
+						&.bullet-default {
+							border: 2px solid $primary;
+							background-color: var(--#{$prefix}body-bg);
+						}
+
+						&.bullet-dot {
+							height: 12px;
+							width: 12px;	
+						}	
+					}
+				}
+
+				.menu-title {
+					font-size: 1.05rem;
+					font-weight: $font-weight-bold;
+				}
+			}
+		}
+	}
+}

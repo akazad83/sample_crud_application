@@ -1,0 +1,34 @@
+//
+// To make future updates easier consider overriding the global variables from _variables.bootstrap.scss and _variables.custom.scss for current demo in this file.
+// Note that this file is included first and variables defined in _variables.bootstrap.scss and _variables.custom.scss
+// are not accessible in this file but you can override any global variable as shown below:
+//
+
+// Border Radiues
+$border-radius:               						0.95rem;
+$border-radius-lg:            						1.5rem;
+$border-radius-xl:                                  2rem;
+
+// Button border radius
+$btn-border-radius:                                 0.95rem;
+$btn-border-radius-sm:                              0.75rem;
+$btn-border-radius-lg:                              1.15rem; 
+
+// Tooltips
+$tooltip-border-radius:             				$border-radius !default;
+
+// Popovers
+$popover-border-radius:             				$border-radius !default;
+
+
+// Form control border radius
+$input-border-radius:                               $btn-border-radius;
+$input-border-radius-sm:                            $btn-border-radius-sm;
+$input-border-radius-lg:                            $btn-border-radius-lg;
+
+$form-select-border-radius:                         $input-border-radius;
+$form-select-border-radius-sm:                      $input-border-radius-sm;
+$form-select-border-radius-lg:                      $input-border-radius-lg;
+
+// Accordion
+$accordion-border-radius:                           $border-radius;

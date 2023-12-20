@@ -1,0 +1,66 @@
+//
+// Variables
+//
+
+// Custom
+$app-separator-border: 1px solid rgba(217, 219, 228, 0.5);
+$app-separator-border-dark: 1px solid $gray-200-dark;
+
+// Reboot
+$app-bg-color:  $white;
+$app-bg-color-dark: $coal-400; 
+$app-blank-bg-color: $body-bg;
+$app-blank-bg-color-dark: $app-bg-color-dark;
+
+// Container
+$app-container-padding-x: 30px !default;
+$app-container-padding-x-mobile: 20px !default;
+
+// General
+$app-general-root-font-size-desktop: 13px;
+$app-general-root-font-size-tablet: 12px;
+$app-general-root-font-size-mobile: 12px;
+
+// Header base
+$app-header-base-height: 70px;
+$app-header-base-height-mobile: 60px;
+$app-header-base-bg-color: $white;
+$app-header-base-bg-color-dark: $coal-200;
+
+// Sidebar base
+$app-sidebar-base-width: 340px;
+$app-sidebar-base-width-mobile: 300px; 
+$app-sidebar-base-bg-color: #F6F6F6;
+$app-sidebar-base-bg-color-dark: $coal-600;
+ 
+// Sidebar primary
+$app-sidebar-primary-base-width: 80px;
+$app-sidebar-primary-base-width-mobile: 60px;
+$app-sidebar-primary-base-bg-color: $app-sidebar-base-bg-color;
+$app-sidebar-primary-base-bg-color-dark: $app-sidebar-base-bg-color-dark;
+
+// Sidebar primary navbar
+$app-sidebar-primary-navbar-btn-size: 50px;
+$app-sidebar-primary-navbar-btn-active-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.14);
+$app-sidebar-primary-navbar-btn-active-box-shadow-dark: 0px 8px 16px rgba(0, 0, 0, 0.14);
+
+// Sidebar primary menu
+$app-sidebar-primary-menu-item-active-box-shadow: 0px 10px 24px rgba(0, 0, 0, 0.05);
+$app-sidebar-primary-menu-item-active-box-shadow-dark: 0px 10px 24px rgba(0, 0, 0, 0.05);
+
+// Footer
+$app-footer-height: auto;
+$app-footer-height-mobile: auto;
+
+// Scrolltop
+$scrolltop-bottom: 43px;
+$scrolltop-bottom-mobile: 23px;
+$scrolltop-end: 7px;
+$scrolltop-end-mobile: 5px;
+
+// Layout builder toggle(used for Demo purposes only)
+$app-layout-builder-toggle-bg-color: $body-bg;
+$app-layout-builder-toggle-end: 50px;
+$app-layout-builder-toggle-end-mobile: 40px;
+$app-layout-builder-toggle-bottom: 40px;
+$app-layout-builder-toggle-bottom-mobile: 20px;

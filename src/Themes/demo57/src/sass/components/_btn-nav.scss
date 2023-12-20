@@ -1,0 +1,12 @@
+//
+// Secondary button
+//
+
+// Hover border colors
+@each $name, $value in $theme-colors {
+    .btn-nav-#{$name} {
+        border: 1px solid var(--#{$prefix}#{$name}-clarity) !important;
+        background-color: var(--#{$prefix}#{$name}-light) !important;
+        color: var(--#{$prefix}#{$name}) !important;
+    }
+}

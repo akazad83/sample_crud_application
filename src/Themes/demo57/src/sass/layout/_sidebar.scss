@@ -1,0 +1,134 @@
+//
+// Sidebar
+//
+
+
+// Sidebar
+.app-sidebar {
+	flex-direction: column;
+	@include border-radius(12px);
+	background-color: $coal-500;
+	
+	.app-sidebar-header {
+		border-bottom: 1px solid $coal-100;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	
+	.app-sidebar-body {
+		display: flex;
+		flex-grow: 1;
+	}
+
+	.app-sidebar-nav {
+		width: 80px;
+	}
+
+	.app-sidebar-content {
+		flex-grow: 1;
+		border-left: 1px solid $coal-100;
+	}
+}
+
+.app-sidebar-body {
+	.menu {
+		.menu-item {                    
+			.menu-heading {
+				color: $gray-500-dark;
+			}
+
+			@include menu-link-default-state( 
+				$title-color: $gray-900-dark,
+				$icon-color:  $gray-500-dark, 
+				$bullet-color: $gray-500-dark,
+				$arrow-color: $gray-500-dark,
+				$bg-color: null 
+			);
+			
+			@include menu-link-hover-state( 
+				$title-color: $white, 
+				$icon-color: $white,
+				$bullet-color: $white,
+				$arrow-color: $white,
+				$bg-color: null
+			);
+			
+			@include menu-link-here-state( 
+				$title-color: $white, 
+				$icon-color: $white,
+				$bullet-color: $white,
+				$arrow-color: $white,
+				$bg-color: null
+			);
+			
+			@include menu-link-show-state( 
+				$title-color: $white, 
+				$icon-color: $white,
+				$bullet-color: $white,
+				$arrow-color: $white,
+				$bg-color: null
+			);
+			
+			@include menu-link-active-state( 
+				$title-color: $white, 
+				$icon-color: $white,
+				$bullet-color: $white,
+				$arrow-color: $white,
+				$bg-color: $success-dark 
+			);
+			
+			.menu-sub {
+				.menu-item {
+					.menu-link:not(:hover):not(.active):not(.show):not(.here) {
+						.menu-title {
+							color: $gray-600-dark,
+						}
+					}
+				}
+			}
+
+			.menu-link.toggle {
+				color: $gray-600-dark !important;
+				background-color: transparent !important;
+			}
+		}
+	}
+
+	.hover-scroll-y {        
+		@include scrollbar-color(transparent, $gray-500-dark);
+	}
+
+	.separator {
+		border-bottom: 1px dashed $gray-300-dark;	
+	}
+}
+
+// Desktop mode
+@include media-breakpoint-up(lg) {
+	
+}
+
+// Tablet & mobile modes
+@include media-breakpoint-down(lg) {
+	.app-sidebar {
+		margin: 0;
+		@include border-radius(0);
+	}
+}
+
+@include color-mode(dark) {
+	// Desktop mode
+	@include media-breakpoint-up(lg) {
+		.app-sidebar {
+			border: 1px solid $coal-100;
+		}
+	}	
+
+	// Tablet & mobile modes
+	@include media-breakpoint-down(lg) {
+		.app-sidebar {
+			border-right: 1px solid $coal-100;
+		}
+	}
+}

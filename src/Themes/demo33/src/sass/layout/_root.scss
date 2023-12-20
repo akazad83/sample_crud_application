@@ -1,0 +1,27 @@
+//
+// Root
+//
+
+// Light mode
+@include color-mode(light) {
+    // Separator
+    --#{$prefix}app-separator-border: #{$app-separator-border};
+
+    // Sidebar primary navbar
+    --#{$prefix}app-sidebar-primary-navbar-btn-active-box-shadow: #{$app-sidebar-primary-navbar-btn-active-box-shadow};
+
+    // Sidebar primary menu
+    --#{$prefix}app-sidebar-primary-menu-item-active-box-shadow: #{$app-sidebar-primary-menu-item-active-box-shadow};
+}
+
+// Dark mode
+@include color-mode(dark) {
+	// Separator
+    --#{$prefix}app-separator-border: #{$app-separator-border-dark};
+
+    // Sidebar primary navbar
+    --#{$prefix}app-sidebar-primary-navbar-btn-active-box-shadow: #{$app-sidebar-primary-navbar-btn-active-box-shadow-dark};
+
+    // Sidebar primary menu
+    --#{$prefix}app-sidebar-primary-menu-item-active-box-shadow: #{$app-sidebar-primary-menu-item-active-box-shadow-dark};
+}
